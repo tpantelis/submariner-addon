@@ -9,9 +9,9 @@ require (
 	github.com/gophercloud/utils v0.0.0-20210909165623-d7085207ff6d
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.19.0
-	github.com/openshift/api v0.0.0-20211201215911-5a82bae32e46
+	github.com/openshift/api v0.0.0-20211209135129-c58d9f695577
 	github.com/openshift/build-machinery-go v0.0.0-20220121085309-f94edc2d6874
-	github.com/openshift/library-go v0.0.0-20210916194400-ae21aab32431
+	github.com/openshift/library-go v0.0.0-20220112153822-ac82336bd076
 	github.com/operator-framework/api v0.5.2
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.4.0
@@ -30,7 +30,7 @@ require (
 	k8s.io/code-generator v0.23.5
 	k8s.io/component-base v0.23.5
 	k8s.io/klog/v2 v2.40.1
-	open-cluster-management.io/addon-framework v0.1.0
+	open-cluster-management.io/addon-framework v0.3.0
 	open-cluster-management.io/api v0.6.1-0.20220302050849-83dafb2a3afd
 	sigs.k8s.io/controller-runtime v0.11.2
 )
@@ -91,6 +91,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
+	github.com/openshift/client-go v0.0.0-20211209144617-7385dd6338e3 // indirect
 	github.com/pkg/profile v1.3.0 // indirect
 	github.com/prometheus/client_golang v1.12.2 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
@@ -98,7 +99,6 @@ require (
 	github.com/prometheus/procfs v0.7.3 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
-	github.com/spf13/afero v1.6.0 // indirect
 	go.etcd.io/etcd/api/v3 v3.5.1 // indirect
 	go.etcd.io/etcd/client/pkg/v3 v3.5.1 // indirect
 	go.etcd.io/etcd/client/v3 v3.5.0 // indirect
@@ -116,7 +116,7 @@ require (
 	go.opentelemetry.io/proto/otlp v0.7.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
-	go.uber.org/zap v1.19.0 // indirect
+	go.uber.org/zap v1.19.1 // indirect
 	golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e // indirect
 	golang.org/x/mod v0.5.1 // indirect
 	golang.org/x/net v0.0.0-20220607020251-c690dde0001d // indirect
@@ -138,7 +138,7 @@ require (
 	k8s.io/apiserver v0.23.5 // indirect
 	k8s.io/gengo v0.0.0-20210813121822-485abfe95c7c // indirect
 	k8s.io/klog v1.0.0 // indirect
-	k8s.io/kube-aggregator v0.22.1 // indirect
+	k8s.io/kube-aggregator v0.23.0 // indirect
 	k8s.io/kube-openapi v0.0.0-20211115234752-e816edb12b65 // indirect
 	k8s.io/utils v0.0.0-20211116205334-6203023598ed // indirect
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.30 // indirect
