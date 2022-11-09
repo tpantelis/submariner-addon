@@ -1,5 +1,8 @@
-# cloud.google.com/go/compute v1.10.0
-## explicit; go 1.17
+# cloud.google.com/go/compute v1.12.1
+## explicit; go 1.19
+cloud.google.com/go/compute/internal
+# cloud.google.com/go/compute/metadata v0.2.1
+## explicit; go 1.19
 cloud.google.com/go/compute/metadata
 # github.com/Azure/azure-sdk-for-go/sdk/azcore v1.1.4
 ## explicit; go 1.18
@@ -257,7 +260,7 @@ github.com/google/uuid
 ## explicit; go 1.18
 github.com/googleapis/enterprise-certificate-proxy/client
 github.com/googleapis/enterprise-certificate-proxy/client/util
-# github.com/googleapis/gax-go/v2 v2.6.0
+# github.com/googleapis/gax-go/v2 v2.7.0
 ## explicit; go 1.19
 github.com/googleapis/gax-go/v2
 github.com/googleapis/gax-go/v2/apierror
@@ -570,7 +573,7 @@ go.etcd.io/etcd/client/v3
 go.etcd.io/etcd/client/v3/credentials
 go.etcd.io/etcd/client/v3/internal/endpoint
 go.etcd.io/etcd/client/v3/internal/resolver
-# go.opencensus.io v0.23.0
+# go.opencensus.io v0.24.0
 ## explicit; go 1.13
 go.opencensus.io
 go.opencensus.io/internal
@@ -769,7 +772,7 @@ golang.org/x/tools/internal/imports
 golang.org/x/tools/internal/packagesinternal
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
-# google.golang.org/api v0.101.0
+# google.golang.org/api v0.103.0
 ## explicit; go 1.19
 google.golang.org/api/compute/v1
 google.golang.org/api/dns/v1
@@ -797,7 +800,7 @@ google.golang.org/appengine/internal/modules
 google.golang.org/appengine/internal/remote_api
 google.golang.org/appengine/internal/urlfetch
 google.golang.org/appengine/urlfetch
-# google.golang.org/genproto v0.0.0-20221018160656-63c7b68cfc55
+# google.golang.org/genproto v0.0.0-20221027153422-115e99e71e1c
 ## explicit; go 1.19
 google.golang.org/genproto/googleapis/api/annotations
 google.golang.org/genproto/googleapis/api/httpbody
