@@ -9,8 +9,8 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/gophercloud/gophercloud v1.2.0
 	github.com/gophercloud/utils v0.0.0-20210909165623-d7085207ff6d
-	github.com/onsi/ginkgo/v2 v2.8.3
-	github.com/onsi/gomega v1.27.1
+	github.com/onsi/ginkgo/v2 v2.9.1
+	github.com/onsi/gomega v1.27.4
 	github.com/openshift/api v0.0.0-20230120195050-6ba31fa438f2
 	github.com/openshift/build-machinery-go v0.0.0-20220913142420-e25cf57ea46d
 	github.com/openshift/library-go v0.0.0-20230222090221-582055a1d5c4
@@ -18,21 +18,21 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/pflag v1.0.5
-	github.com/submariner-io/admiral v0.15.0-m3
+	github.com/submariner-io/admiral v0.15.0-m4
 	github.com/submariner-io/cloud-prepare v0.15.0-m3
-	github.com/submariner-io/submariner v0.15.0-m3
-	github.com/submariner-io/submariner-operator v0.15.0-m3
+	github.com/submariner-io/submariner v0.15.0-m4
+	github.com/submariner-io/submariner-operator v0.15.0-m4
 	golang.org/x/oauth2 v0.6.0
 	google.golang.org/api v0.111.0
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.26.1
-	k8s.io/apiextensions-apiserver v0.26.1
-	k8s.io/apimachinery v0.26.1
-	k8s.io/client-go v0.26.1
-	k8s.io/code-generator v0.26.1
-	k8s.io/component-base v0.26.1
+	k8s.io/api v0.26.2
+	k8s.io/apiextensions-apiserver v0.26.2
+	k8s.io/apimachinery v0.26.2
+	k8s.io/client-go v0.26.2
+	k8s.io/code-generator v0.26.2
+	k8s.io/component-base v0.26.2
 	k8s.io/klog/v2 v2.90.1
-	open-cluster-management.io/addon-framework v0.6.1
+	open-cluster-management.io/addon-framework v0.1.0
 	open-cluster-management.io/api v0.10.1-0.20230216050312-b716d4a5c514
 	sigs.k8s.io/controller-runtime v0.14.5
 )
@@ -83,7 +83,7 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/cel-go v0.12.6 // indirect
 	github.com/google/gnostic v0.6.9 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
@@ -139,14 +139,14 @@ require (
 	go.uber.org/multierr v1.8.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/crypto v0.5.0 // indirect
-	golang.org/x/mod v0.8.0 // indirect
+	golang.org/x/mod v0.9.0 // indirect
 	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/term v0.6.0 // indirect
 	golang.org/x/text v0.8.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
-	golang.org/x/tools v0.6.0 // indirect
+	golang.org/x/tools v0.7.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20230223222841-637eb2293923 // indirect
 	google.golang.org/grpc v1.53.0 // indirect
@@ -154,10 +154,10 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/apiserver v0.26.1 // indirect
+	k8s.io/apiserver v0.26.2 // indirect
 	k8s.io/gengo v0.0.0-20220902162205-c0856e24416d // indirect
 	k8s.io/klog v1.0.0 // indirect
-	k8s.io/kms v0.26.1 // indirect
+	k8s.io/kms v0.26.2 // indirect
 	k8s.io/kube-aggregator v0.26.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230202010329-39b3636cbaa3 // indirect
 	k8s.io/utils v0.0.0-20230202215443-34013725500c // indirect
