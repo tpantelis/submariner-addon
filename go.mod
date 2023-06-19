@@ -10,7 +10,7 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/gophercloud/gophercloud v1.4.0
 	github.com/gophercloud/utils v0.0.0-20210909165623-d7085207ff6d
-	github.com/onsi/ginkgo/v2 v2.10.0
+	github.com/onsi/ginkgo/v2 v2.11.0
 	github.com/onsi/gomega v1.27.8
 	github.com/openshift/api v0.0.0-20230503133300-8bbcb7ca7183
 	github.com/openshift/library-go v0.0.0-20230531082824-be85f8400975
@@ -142,7 +142,7 @@ require (
 	golang.org/x/mod v0.10.0 // indirect
 	golang.org/x/net v0.10.0 // indirect
 	golang.org/x/sync v0.2.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
+	golang.org/x/sys v0.9.0 // indirect
 	golang.org/x/term v0.8.0 // indirect
 	golang.org/x/text v0.9.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
