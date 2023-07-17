@@ -18,9 +18,9 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
-	github.com/submariner-io/admiral v0.16.0-m0
+	github.com/submariner-io/admiral v0.16.0-m2
 	github.com/submariner-io/cloud-prepare v0.16.0-m0.0.20230613072954-3282befea5b4
-	github.com/submariner-io/submariner v0.16.0-m0
+	github.com/submariner-io/submariner v0.16.0-m2
 	github.com/submariner-io/submariner-operator v0.16.0-m0
 	golang.org/x/oauth2 v0.9.0
 	google.golang.org/api v0.128.0
@@ -113,10 +113,10 @@ require (
 	github.com/openshift/client-go v0.0.0-20230503144108-75015d2347cb // indirect
 	github.com/pkg/browser v0.0.0-20210911075715-681adbf594b8 // indirect
 	github.com/pkg/profile v1.3.0 // indirect
-	github.com/prometheus/client_golang v1.15.1 // indirect
+	github.com/prometheus/client_golang v1.16.0 // indirect
 	github.com/prometheus/client_model v0.4.0 // indirect
 	github.com/prometheus/common v0.42.0 // indirect
-	github.com/prometheus/procfs v0.9.0 // indirect
+	github.com/prometheus/procfs v0.10.1 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/rs/zerolog v1.29.1 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
@@ -141,8 +141,8 @@ require (
 	golang.org/x/crypto v0.10.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
 	golang.org/x/net v0.11.0 // indirect
-	golang.org/x/sync v0.2.0 // indirect
-	golang.org/x/sys v0.9.0 // indirect
+	golang.org/x/sync v0.3.0 // indirect
+	golang.org/x/sys v0.10.0 // indirect
 	golang.org/x/term v0.9.0 // indirect
 	golang.org/x/text v0.10.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -162,7 +162,7 @@ require (
 	k8s.io/kms v0.27.3 // indirect
 	k8s.io/kube-aggregator v0.27.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230501164219-8b0f38b5fd1f // indirect
-	k8s.io/utils v0.0.0-20230406110748-d93618cff8a2 // indirect
+	k8s.io/utils v0.0.0-20230711102312-30195339c3c7 // indirect
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.1.2 // indirect
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
 	sigs.k8s.io/kube-storage-version-migrator v0.0.4 // indirect
