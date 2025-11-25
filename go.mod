@@ -14,11 +14,11 @@ require (
 	github.com/openshift/library-go v0.0.0-20250711143941-47604345e7ea
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.10.1
-	github.com/spf13/pflag v1.0.9
-	github.com/submariner-io/admiral v0.22.0-rc0
-	github.com/submariner-io/cloud-prepare v0.22.0-rc0
-	github.com/submariner-io/submariner v0.22.0-rc0
-	github.com/submariner-io/submariner-operator v0.22.0-rc0
+	github.com/spf13/pflag v1.0.10
+	github.com/submariner-io/admiral v0.22.0-rc1
+	github.com/submariner-io/cloud-prepare v0.22.0-rc1
+	github.com/submariner-io/submariner v0.22.0-rc1
+	github.com/submariner-io/submariner-operator v0.22.0-rc1
 	go.uber.org/mock v0.6.0
 	golang.org/x/oauth2 v0.33.0
 	google.golang.org/api v0.256.0
