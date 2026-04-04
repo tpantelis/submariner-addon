@@ -18,11 +18,15 @@ import (
 )
 
 const (
-	defaultInstanceType  = "m5.xlarge"
-	accessKeyIDSecretKey = "aws_access_key_id"
+	DefaultInstanceType = "m5.xlarge"
+	AccessKeyID         = "aws_access_key_id"
 	//#nosec G101 -- This is the name of a key that will store a secret, but not a default secret
-	accessKeySecretKey = "aws_secret_access_key"
-	workName           = "aws-submariner-gateway-machineset"
+	SecretAccessKey              = "aws_secret_access_key"
+	VPCNameKey                   = "submariner.io/vpc-id"
+	SubnetListKey                = "submariner.io/subnet-id-list"
+	ControlPlaneSecurityGroupKey = "submariner.io/control-plane-sg-id"
+	WorkerSecurityGroupKey       = "submariner.io/worker-sg-id"
+	workName                     = "aws-submariner-gateway-machineset"
 )
 
 type awsProvider struct {
@@ -35,6 +39,12 @@ type awsProvider struct {
 	cloudPrepare      cpapi.Cloud
 	gatewayDeployer   cpapi.GatewayDeployer
 }
+
+var (
+	NewClient             = cpclient.New
+	NewCloud              = cpaws.NewCloud
+	NewOcpGatewayDeployer = cpaws.NewOcpGatewayDeployer
+)
 
 func NewProvider(ctx context.Context, info *provider.Info) (*awsProvider, error) {
 	if info.Region == "" {
@@ -51,22 +61,22 @@ func NewProvider(ctx context.Context, info *provider.Info) (*awsProvider, error)
 
 	instanceType := info.GatewayConfig.AWS.InstanceType
 	if instanceType == "" {
-		instanceType = defaultInstanceType
+		instanceType = DefaultInstanceType
 	}
 
-	accessKeyID, ok := info.CredentialsSecret.Data[accessKeyIDSecretKey]
+	accessKeyID, ok := info.CredentialsSecret.Data[AccessKeyID]
 	if !ok {
-		return nil, fmt.Errorf("the aws credentials key %s is not in secret %s/%s", accessKeyIDSecretKey, info.ClusterName,
+		return nil, fmt.Errorf("the aws credentials key %s is not in secret %s/%s", AccessKeyID, info.ClusterName,
 			info.CredentialsSecret.Name)
 	}
 
-	secretAccessKey, ok := info.CredentialsSecret.Data[accessKeySecretKey]
+	secretAccessKey, ok := info.CredentialsSecret.Data[SecretAccessKey]
 	if !ok {
-		return nil, fmt.Errorf("the aws credentials key %s is not in secret %s/%s", accessKeySecretKey, info.ClusterName,
+		return nil, fmt.Errorf("the aws credentials key %s is not in secret %s/%s", SecretAccessKey, info.ClusterName,
 			info.CredentialsSecret.Name)
 	}
 
-	awsClient, err := cpclient.New(ctx, info.Region, cpclient.WithCredentials(string(accessKeyID), string(secretAccessKey)))
+	awsClient, err := NewClient(ctx, info.Region, cpclient.WithCredentials(string(accessKeyID), string(secretAccessKey)))
 	if err != nil {
 		return nil, errors.Wrap(err, "error creating AWS client")
 	}
@@ -76,11 +86,11 @@ func NewProvider(ctx context.Context, info *provider.Info) (*awsProvider, error)
 	if info.SubmarinerConfigAnnotations != nil {
 		annotations := info.SubmarinerConfigAnnotations
 
-		if vpcID, exists := annotations["submariner.io/vpc-id"]; exists {
+		if vpcID, exists := annotations[VPCNameKey]; exists {
 			cloudOptions = append(cloudOptions, cpaws.WithVPCName(vpcID))
 		}
 
-		if subnetIDList, exists := annotations["submariner.io/subnet-id-list"]; exists {
+		if subnetIDList, exists := annotations[SubnetListKey]; exists {
 			subnetIDs := strings.Split(subnetIDList, ",")
 			for i := range subnetIDs {
 				subnetIDs[i] = strings.TrimSpace(subnetIDs[i])
@@ -89,20 +99,20 @@ func NewProvider(ctx context.Context, info *provider.Info) (*awsProvider, error)
 			cloudOptions = append(cloudOptions, cpaws.WithPublicSubnetList(subnetIDs))
 		}
 
-		if controlPlaneSGID, exists := annotations["submariner.io/control-plane-sg-id"]; exists {
+		if controlPlaneSGID, exists := annotations[ControlPlaneSecurityGroupKey]; exists {
 			cloudOptions = append(cloudOptions, cpaws.WithControlPlaneSecurityGroup(controlPlaneSGID))
 		}
 
-		if workerSGID, exists := annotations["submariner.io/worker-sg-id"]; exists {
+		if workerSGID, exists := annotations[WorkerSecurityGroupKey]; exists {
 			cloudOptions = append(cloudOptions, cpaws.WithWorkerSecurityGroup(workerSGID))
 		}
 	}
 
-	cloudPrepare := cpaws.NewCloud(awsClient, info.InfraID, info.Region, cloudOptions...)
+	cloudPrepare := NewCloud(awsClient, info.InfraID, info.Region, cloudOptions...)
 
 	machineSetDeployer := ocp.NewK8sMachinesetDeployer(info.RestMapper, info.DynamicClient)
 
-	gwDeployer, err := cpaws.NewOcpGatewayDeployer(cloudPrepare, machineSetDeployer, instanceType)
+	gwDeployer, err := NewOcpGatewayDeployer(cloudPrepare, machineSetDeployer, instanceType)
 	if err != nil {
 		return nil, errors.Wrap(err, "error creating GW deployer")
 	}
